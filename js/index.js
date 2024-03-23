@@ -50,7 +50,7 @@ function decolor(diff){
 
 function store(int){
     localStorage.setItem("id", int);
-    location.href = "contact.html";
+    location.href = "contact.php";
 }
 
 
