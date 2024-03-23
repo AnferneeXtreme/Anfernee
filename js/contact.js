@@ -9,7 +9,7 @@ function afficher(){
     }else{
         $.ajax({
             type: "POST",
-            url: "../php/traitement.php",
+            url: "./php/traitement.php",
             data: "afficher=" + id,
             success: function(Data){
                 console.log(Data);
@@ -29,7 +29,7 @@ function modifier(id){
 
     $.ajax({
         type: "POST",
-        url: "../php/traitement.php",
+        url: "./php/traitement.php",
         data: donnee,
         success: function(){
             alert("Contact modifié");
@@ -47,7 +47,7 @@ function supprimer(id){
 
     $.ajax({
         type: "POST",
-        url: "../php/traitement.php",
+        url: "./php/traitement.php",
         data: donnee,
         success: function(){
             alert("Contact supprimé");
