@@ -9,7 +9,7 @@ function creer(){
 
     $.ajax({
         type: "POST",
-        url: "../php/traitement.php",
+        url: "./php/traitement.php",
         data: donnee,
         success: function(Data){
             alert("Contact crée");
@@ -28,7 +28,7 @@ function lister(){
 
     $.ajax({
         type: "POST",
-        url: "../php/traitement.php",
+        url: "./php/traitement.php",
         data: donnee,
         success: function(Data){
             console.log(Data);
