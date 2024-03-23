@@ -8,11 +8,11 @@ if(isset($_POST['creer'])){
     $contact->creer($_POST);
     $liste = $contact->lister();
     foreach($liste as $un){
-        echo '<tr onmouseover="color('.$un['Id'].')" onmouseleave="decolor('.$un['Id'].')" onclick="store('.$un['Id'].')" id="row'.$un['Id'].'">';
-        echo '<td>'.$un['Prenom'].'</td>';
-        echo '<td>'.$un['Nom'].'</td>';
-        echo '<td>'.$un['Telephone'].'</td>';
-        echo '<td>'.$un['Email'].'</td>';
+        echo '<tr onmouseover="color('.$un['id'].')" onmouseleave="decolor('.$un['id'].')" onclick="store('.$un['id'].')" id="row'.$un['id'].'">';
+        echo '<td>'.$un['prenom'].'</td>';
+        echo '<td>'.$un['nom'].'</td>';
+        echo '<td>'.$un['telephone'].'</td>';
+        echo '<td>'.$un['email'].'</td>';
         echo '</tr>';
     }
 }
@@ -20,11 +20,11 @@ if(isset($_POST['creer'])){
 if(isset($_POST['lister'])){
     $liste = $contact->lister();
     foreach($liste as $un){
-        echo '<tr onmouseover="color('.$un['Id'].')" onmouseleave="decolor('.$un['Id'].')" onclick="store('.$un['Id'].')" id="row'.$un['Id'].'">';
-        echo '<td>'.$un['Prenom'].'</td>';
-        echo '<td>'.$un['Nom'].'</td>';
-        echo '<td>'.$un['Telephone'].'</td>';
-        echo '<td>'.$un['Email'].'</td>';
+        echo '<tr onmouseover="color('.$un['id'].')" onmouseleave="decolor('.$un['id'].')" onclick="store('.$un['id'].')" id="row'.$un['id'].'">';
+        echo '<td>'.$un['prenom'].'</td>';
+        echo '<td>'.$un['nom'].'</td>';
+        echo '<td>'.$un['telephone'].'</td>';
+        echo '<td>'.$un['email'].'</td>';
         echo '</tr>';
     }
 }
@@ -50,16 +50,16 @@ if(isset($_POST['afficher'])){
         echo '</div>';
         echo '<div>';
         echo '<div class="input">';
-        echo '<input name="prenom" id="prenom" value="'.$un['Prenom'].'" required>';
+        echo '<input name="prenom" id="prenom" value="'.$un['prenom'].'" required>';
         echo '</div>';
         echo '<div class="input">';
-        echo '<input name="telephone" id="telephone" value="'.$un['Telephone'].'" required>';
+        echo '<input name="telephone" id="telephone" value="'.$un['telephone'].'" required>';
         echo '</div>';
         echo '<div class="input">';
         echo '<input type="date" name="naissance" id="naissance" required>';
         echo '</div>';
         echo '<div class="input">';
-        echo '<input name="adresse" id="adresse" value="'.$un['Adresse'].'" required>';
+        echo '<input name="adresse" id="adresse" value="'.$un['adresse'].'" required>';
         echo '</div>';
         echo '</div>';
         echo '</div>';
@@ -80,22 +80,22 @@ if(isset($_POST['afficher'])){
         echo '</div>';
         echo '<div>';
         echo '<div class="input">';
-        echo '<input name="nom" id="nom" value="'.$un['Nom'].'" required>';
+        echo '<input name="nom" id="nom" value="'.$un['nom'].'" required>';
         echo '</div>';
         echo '<div class="input">';
-        echo '<input type="email" name="email" id="email" value="'.$un['Email'].'" required>';
+        echo '<input type="email" name="email" id="email" value="'.$un['email'].'" required>';
         echo '</div>';
         echo '<div class="input">';
-        echo '<input name="ville" id="ville" value="'.$un['Ville'].'" required>';
+        echo '<input name="ville" id="ville" value="'.$un['ville'].'" required>';
         echo '</div>';
         echo '<div class="input">';
-        echo '<input name="profession" id="profession" value="'.$un['Profession'].'" required>';
+        echo '<input name="profession" id="profession" value="'.$un['profession'].'" required>';
         echo '</div>';
         echo '</div>';
         echo '</div>';
         echo '</div>';
         echo '<div class="button">';
-        echo '<button onclick="modifier('.$un['Id'].')">Modifier</button> <button onclick="supprimer('.$un['Id'].')">Supprimer</button>';
+        echo '<button onclick="modifier('.$un['id'].')">Modifier</button> <button onclick="supprimer('.$un['id'].')">Supprimer</button>';
         echo '</div>';
     }
 }
