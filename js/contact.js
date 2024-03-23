@@ -14,6 +14,7 @@ function afficher(){
             success: function(Data){
                 console.log(Data);
                 document.getElementById("formulaire").innerHTML = Data;
+                localStorage.removeItem("id);
             },
             error: function(){
              alert("Erreur dans l'envoi");
@@ -33,7 +34,7 @@ function modifier(id){
         data: donnee,
         success: function(){
             alert("Contact modifié");
-            location.replace("index.html");
+            location.replace("index.php");
         },
         error: function(){
             alert("Erreur dans l'envoi");
@@ -51,7 +52,7 @@ function supprimer(id){
         data: donnee,
         success: function(){
             alert("Contact supprimé");
-            location.replace("index.html");
+            location.replace("index.php");
         },
         error: function(){
              alert("Erreur dans l'envoi");
