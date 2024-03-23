@@ -14,7 +14,7 @@ function afficher(){
             success: function(Data){
                 console.log(Data);
                 document.getElementById("formulaire").innerHTML = Data;
-                localStorage.removeItem("id);
+                localStorage.removeItem("id");
             },
             error: function(){
              alert("Erreur dans l'envoi");
