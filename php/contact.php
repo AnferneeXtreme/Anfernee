@@ -2,10 +2,10 @@
 
 class Contact{
 
-    const DB_host = 'localhost';
-    const DB_Name = 'cont';
-    const user = 'root';
-    const password = '';
+    const DB_host = 'tagahserver.mysql.database.azure.com';
+    const DB_Name = 'contact';
+    const user = 'tagah';
+    const password = 'Robert237';
 
     private $conn = null;
 
