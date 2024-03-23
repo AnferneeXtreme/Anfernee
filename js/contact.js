@@ -5,12 +5,12 @@ $(function(){
 function afficher(){
     var id = localStorage.getItem("id") ?? 0;
     if(id == 0){
-        document.getElementById("").innerHTML = "";
+        document.getElementById("formulaire").innerHTML = "";
     }else{
         $.ajax({
             type: "POST",
             url: "./php/traitement.php",
-            data: "afficher=" + id,
+            data: "afficher=true&id=" + id,
             success: function(Data){
                 console.log(Data);
                 document.getElementById("formulaire").innerHTML = Data;
